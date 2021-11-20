@@ -1,24 +1,88 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CalcHW" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="الرقم الأول" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mH1-zb-q5e">
+                                <rect key="frame" x="52" y="138" width="311" height="52"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="qsJ-Xh-PzU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="الرقم الثاني" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gqq-Rx-ZK7">
+                                <rect key="frame" x="52" y="232" width="311" height="52"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="ewk-mZ-M2K"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ziz-7U-YqX">
+                                <rect key="frame" x="126" y="367" width="162" height="51"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="احسب">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="calcButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lFb-gz-zFH"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="النتيجة" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SPh-dh-5ua">
+                                <rect key="frame" x="139" y="485" width="136" height="65"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="54"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                        <constraints>
+                            <constraint firstItem="mH1-zb-q5e" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="94" id="1DQ-87-Tfk"/>
+                            <constraint firstItem="ziz-7U-YqX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="126" id="2gQ-pj-w2N"/>
+                            <constraint firstItem="SPh-dh-5ua" firstAttribute="centerX" secondItem="ziz-7U-YqX" secondAttribute="centerX" id="CwE-aE-KOE"/>
+                            <constraint firstItem="mH1-zb-q5e" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="52" id="I9X-Pn-oeU"/>
+                            <constraint firstItem="Gqq-Rx-ZK7" firstAttribute="top" secondItem="mH1-zb-q5e" secondAttribute="bottom" constant="42" id="RiQ-wt-zwR"/>
+                            <constraint firstItem="mH1-zb-q5e" firstAttribute="leading" secondItem="Gqq-Rx-ZK7" secondAttribute="leading" id="Rjr-Kz-xxc"/>
+                            <constraint firstItem="SPh-dh-5ua" firstAttribute="top" secondItem="ziz-7U-YqX" secondAttribute="bottom" constant="67" id="W8d-Te-Qxw"/>
+                            <constraint firstItem="Gqq-Rx-ZK7" firstAttribute="centerX" secondItem="ziz-7U-YqX" secondAttribute="centerX" id="hQZ-mG-hqK"/>
+                            <constraint firstItem="mH1-zb-q5e" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jYK-Sz-SJB"/>
+                            <constraint firstItem="ziz-7U-YqX" firstAttribute="top" secondItem="Gqq-Rx-ZK7" secondAttribute="bottom" constant="83" id="rVG-b8-q7q"/>
+                            <constraint firstItem="mH1-zb-q5e" firstAttribute="trailing" secondItem="Gqq-Rx-ZK7" secondAttribute="trailing" id="xWu-0W-Vk4"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="firstNumberTextField" destination="mH1-zb-q5e" id="Mel-Rc-cih"/>
+                        <outlet property="resutlLabel" destination="SPh-dh-5ua" id="Uak-kV-LZn"/>
+                        <outlet property="secondNumberTextField" destination="Gqq-Rx-ZK7" id="GEY-Eh-CBV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="138.61607142857142"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
